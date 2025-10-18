@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My SPA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script>
+    if (window.location.pathname.endsWith('index.html') && !window.location.hash) {
+      window.location.replace('/#' + 'home');
+    }
+  </script>
+  <!-- Loadable templates -->
+  <div id="header"></div>
+
+  <div class="layout">
+    <div id="sidebar"></div>
+    <main id="content" class="fade"></main>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
