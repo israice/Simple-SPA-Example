@@ -31,7 +31,7 @@ A simple, lightweight, and reliable Single Page Application (SPA) boilerplate de
 
 *   **No build tools required:** Works out of the box, just edit the files and push to GitHub.
 *   **Simple hash-based routing:** Uses the URL hash (`#`) to navigate between pages without full page reloads.
-*   **Dynamic page loading:** Page content is loaded asynchronously from the `pages` directory.
+*   **Dynamic page loading:** Page content is loaded asynchronously from the `FRONTEND` directory.
 *   **Template support:** Reusable templates for `header`, `footer`, and a dynamic `sidebar`.
 *   **Nested navigation:** The sidebar dynamically updates to show child pages based on the selected top-level topic.
 *   **Smooth page transitions:** Uses CSS animations for fade-in/fade-out effects between page loads.
@@ -41,15 +41,12 @@ A simple, lightweight, and reliable Single Page Application (SPA) boilerplate de
 
 The project follows a simple and intuitive structure:
 
-*   `index.html`: The single HTML file that serves as the entry point for the application. It contains the containers for the header, sidebar, content, and footer.
-*   `app.js`: The core of the application. This file contains all the JavaScript logic for:
-    *   Routing (based on `window.location.hash`).
-    *   Asynchronously fetching and loading page content.
-    *   Loading HTML templates.
-    *   Dynamically generating the nested sidebar navigation.
-*   `pages/`: This directory holds the HTML content for each "page" of the application.
-*   `templates/`: This directory contains reusable HTML snippets like the `header.html` and `footer.html`. The sidebar is generated dynamically by `app.js`.
-*   `style.css`: The stylesheet for the application, including the smooth transition animations.
+*   `run.py`: FastAPI server that serves the frontend.
+*   `FRONTEND/`: All frontend files in a single directory:
+    *   `index.html`: The entry point with containers for header, sidebar, content, and footer.
+    *   `app.js`: Core JavaScript logic — routing, page loading, templates, sidebar navigation.
+    *   `style.css`: Stylesheet with smooth transition animations.
+    *   `*.html`: Page content files (`home.html`, `about.html`, etc.) and reusable templates (`header.html`, `footer.html`). The sidebar is generated dynamically by `app.js`.
 
 ## Getting Started
 

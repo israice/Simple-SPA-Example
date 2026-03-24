@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p FRONTEND)",
+      "Bash(mv index.html app.js style.css pages templates FRONTEND/)",
+      "Bash(mv pages/* .)",
+      "Bash(mv templates/* .)",
+      "Bash(rmdir pages:*)"
+    ]
+  }
+}

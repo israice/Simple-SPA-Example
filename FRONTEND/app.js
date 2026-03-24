@@ -55,7 +55,7 @@ const SPA = {
       if (!el) continue;
 
       try {
-        const html = await this.loadHTML(`templates/${name}.html`, "templates");
+        const html = await this.loadHTML(`${name}.html`, "templates");
         el.innerHTML = html;
       } catch (err) {
         console.warn(`⚠️ Failed to load template "${name}":`, err.message);
@@ -82,7 +82,7 @@ const SPA = {
     content.classList.add("fade-out");
 
     try {
-      const html = await this.loadHTML(`pages/${page}.html`, "pages");
+      const html = await this.loadHTML(`${page}.html`, "pages");
 
       setTimeout(() => {
         content.innerHTML = html;
